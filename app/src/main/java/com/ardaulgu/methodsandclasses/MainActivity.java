@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    String username;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,19 +17,27 @@ public class MainActivity extends AppCompatActivity {
         testMethod();
         System.out.println(math(3,5));
         System.out.println(newMethod("Arda"));
+
+        username = "";
     }
 
     public void testMethod(){
+        username = "Lars";
+
         int x = 4 + 4;
+        x = 9;
         System.out.println("value of x:" + x);
     }
 
     public int math(int a, int b){
-
+        username = "Kirk";
+        int x = 11;
+        System.out.println("value of x in math: " + x);
         return a + b;
     }
 
     public String newMethod(String string){
+        username = "Rob";
         return string + " new Method";
     }
 
@@ -52,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        System.out.println("on pause called");
+        System.out.println("on pause called ");
 
     }
 }
