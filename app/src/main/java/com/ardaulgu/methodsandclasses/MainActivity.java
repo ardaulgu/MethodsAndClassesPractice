@@ -8,6 +8,7 @@ public class MainActivity extends AppCompatActivity {
 
     String username;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,38 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(newMethod("Arda"));
 
         username = "";
+
+        makeMusicians();
+
+        makeSimpsons();
+
     }
+
+    public void makeSimpsons(){
+
+        Simpsons homer = new Simpsons("Homer", 50 , "Nuclear");
+        System.out.println(homer.getName());
+        homer.setName("Homer Simpsons");
+        System.out.println(homer.getName());
+
+    }
+
+
+
+    public void makeMusicians(){
+
+        Musicians james = new Musicians("James", "Guitar", 50);
+        System.out.println(james.instrument);
+        // james.age = 50;
+        // james.instrument = "Guitar";
+        // james.name = "James";
+
+    }
+
+
+
+
+
 
     public void testMethod(){
         username = "Lars";
